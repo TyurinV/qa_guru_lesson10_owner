@@ -1,2 +1,2 @@
-# qa_guru_lesson8_owner
+# qa_guru_lesson10_owner
 Запускаем тесты на локальной машине или на удаленной
