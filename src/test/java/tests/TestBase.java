@@ -45,6 +45,5 @@ public class TestBase {
         if (config.videoStorage() != null)
             attachVideo();
         closeWebDriver();
-        closeWebDriver();
     }
 }
