@@ -3,16 +3,17 @@ package tests;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static utils.RandomUtils.*;
 
 
-public class PracticeForm {
+public class PracticeForm extends TestBase {
 
     @Test
     void textFields() {
-        open("https://demoqa.com/automation-practice-form");
+        open(baseUrl);
         String firstName = getRandomString(10),
                 lastName = getRandomString(8),
                 email = getRandomEmail(),
