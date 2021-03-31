@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static utils.RandomUtils.*;
 
 
-public class PracticeForm extends TestBase {
+public class PracticeForm {
 
     @Test
     void textFields() {
@@ -26,6 +26,8 @@ public class PracticeForm extends TestBase {
                 hobby1 = "Sports",
                 hobby2 = "Reading",
                 hobby3 = "Music",
+                state = "NCR",
+                city = "Gurgaon",
                 currentAddress = getRandomString(50);
 
         $("#firstName").setValue(firstName);
@@ -57,7 +59,7 @@ public class PracticeForm extends TestBase {
         $x("//td[text()='Hobbies']").parent().shouldHave(text(hobby1 + ", " + hobby2 + ", " + hobby3));
         $x("//td[text()='Picture']").parent().shouldHave(text("che.png"));
         $x("//td[text()='Address']").parent().shouldHave(text(currentAddress));
-        $x("//td[text()='State and City']").parent().shouldHave(text("NCR Gurgaon"));
+        $x("//td[text()='State and City']").parent().shouldHave(text(state + " " + city));
 
     }
 
